@@ -12,7 +12,7 @@ const adminLogin = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { role: "superadmin", email },
+      { email },
       process.env.JWT_SECRET,
       { expiresIn: "7d" }
     );

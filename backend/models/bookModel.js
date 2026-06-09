@@ -15,7 +15,6 @@ const bookSchema = new mongoose.Schema({
     unique: true,
     minlength: 13,
     maxlength: 13,
-    match: /^[0-9]{13}$/,
   },
   price: {
     type: Number,
