@@ -80,7 +80,7 @@ const generateDescription = async (req, res) => {
     }
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash" });
 
     const prompt = `Write a short 3-4 line description for a book titled "${title}" authored by "${author}". Focus on an engaging summary suitable for a book catalog.`;
 
@@ -115,7 +115,7 @@ const chatWithAI = async (req, res) => {
     }
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash" });
 
     // Format history for Gemini
     const history = book.chatHistory.map((msg) => ({
